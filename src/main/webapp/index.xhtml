@@ -1,13 +1,32 @@
+<!-- Configuracion del index la cabecera lleva los namespaces que se utilizaran , ya sea JSF,PRiMEFACES -->
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"      
       xmlns:h="http://java.sun.com/jsf/html">
       
       <h:head>
         <title>JSF 2.0 Hello World</title>
+        <!--La forma de agregar un css es con la etiqueta h:outputStyleSheet (library es la ruta y name:el nombre del archvo css)-->		
+        <h:outputStylesheet library="css" name="styles.css"></h:outputStylesheet>
     </h:head>
     
     <h:body>
-		<h:outputLabel value = "Hola mundo"></h:outputLabel>    
+		<h:outputLabel value = "Primer Formulario"></h:outputLabel>    
+<!-- Para el enlace de jsf se usa el nombre de la clase BEAN con la primera en minuscula-->			
+			
+			<h:form id="formLogin">
+				<h:panelGrid columns="2">
+				<h:outputLabel value="usuario: " styleClass="colorGreen"></h:outputLabel>
+				<h:inputText id="txtUser" value="#{controller.name}" required="true" requiredMessage="Se requiere el usuario*"></h:inputText>
+				
+				<h:outputLabel value="Password: " styleClass="colorGreen"></h:outputLabel>
+				<h:inputSecret id="txtPass" value="#{controller.pass}" required="true" requiredMessage="Se requiere de password*"></h:inputSecret>
+				
+				
+				<h:commandButton value="Entrar" action="#{controller.ingresar}"></h:commandButton>
+				
+				</h:panelGrid>
+			
+			</h:form>
     
     </h:body>
       

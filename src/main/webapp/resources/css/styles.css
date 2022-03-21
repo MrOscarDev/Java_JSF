@@ -1,3 +1,22 @@
 .colorGreen{
 	color: green;
 }
+.headerTable{
+	text-align: center;
+	padding: 0 50px;
+	background: #E5E5E5;
+	border-bottom: 1px solid #BBBBBB;
+}
+
+.textjustify{
+	
+	text-align: center;
+	background: white;
+}
+
+.tblCenter{
+	margin-left: 600px;
+}
+body{
+	background: #FFC300;
+}
